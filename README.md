@@ -75,9 +75,6 @@ Monthly seismic rates are computed separately per window and **normalized to eve
 
 ![EDA Graphs](graphs_eda.png)
 
-**H3 Hexagonal Density Map — Full Study Area:**
-
-![H3 Density Map](H3_density_map.png)
 
 ---
 
@@ -111,6 +108,10 @@ rate_change = monthly_rate_post − monthly_rate_pre
 ```
 
 This value forms the basis for all three anomaly detection methods.
+
+**H3 Hexagonal Density Map — Full Study Area:**
+
+![H3 Density Map](H3_density_map.png)
 
 ### 2.3 Resolution Comparison: Res 5 vs Res 6
 
