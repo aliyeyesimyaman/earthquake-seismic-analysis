@@ -31,6 +31,12 @@ Prior work has demonstrated that seismic rate variations are a powerful signal f
 This project applies analogous reasoning to the 2023 Kahramanmaraş sequence: by computing **normalized monthly seismic rates** per spatial unit before and after the mainshock, and flagging statistically anomalous rate changes, we aim to characterize the spatial footprint of the post-seismic stress redistribution.
 
 ### 1.4 Dataset Introduction
+**Official data source:**
+- USGS Earthquake Hazards Program: https://earthquake.usgs.gov
+- FDSNWS Event API Documentation: https://earthquake.usgs.gov/fdsnws/event/1/
+- ANSS Comprehensive Earthquake Catalog (ComCat): https://earthquake.usgs.gov/data/comcat/
+
+> All data is publicly available and requires no authentication. Query results may vary slightly over time as the catalog is continuously updated with revised locations and magnitudes.
 
 Seismicity data is sourced from the **USGS ANSS Comprehensive Earthquake Catalog (ComCat)**, accessed via the FDSNWS Event Web Service REST API — a freely accessible, programmatically queryable catalog that returns clean CSV output without authentication requirements.
 
