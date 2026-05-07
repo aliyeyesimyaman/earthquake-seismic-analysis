@@ -72,6 +72,8 @@ Monthly seismic rates are computed separately per window and **normalized to eve
 ![Cleaned Data](cleaned_data.png)
 
 **Exploratory Data Analysis:**
+*Monthly event count, magnitude distribution, and pre/post 
+event comparison across the study period (2018–2024).*
 
 ![EDA Graphs](graphs_eda.png)
 
