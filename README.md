@@ -320,6 +320,10 @@ All three methods agree on a **spatial consensus core** — a set of hexagons th
 
 IQR flags an additional ~17 cells beyond the consensus region. These secondary anomalies likely represent moderately elevated activity in hexagons located near fault step-overs and secondary structures — potentially real geophysical signal, but insufficiently extreme to cross the higher thresholds of Mean+2σ and Isolation Forest.
 
+<p align="center">
+  <img src="result_comparison.png" width="80%">
+</p>
+
 ### 6.4 Key Finding
 
 > The 6 February 2023 Kahramanmaraş earthquake sequence produced a spatially coherent, fault-aligned pattern of anomalously elevated seismic activity concentrated along the East Anatolian Fault Zone. This pattern is detectable with all three baseline methods at H3 Resolution 6 (~44 km²), but not at Resolution 5 (~252 km²), demonstrating that spatial resolution is a critical parameter in spatio-temporal seismic anomaly detection.
