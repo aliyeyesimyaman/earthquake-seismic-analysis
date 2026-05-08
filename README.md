@@ -1,8 +1,6 @@
 # Spatial-Temporal Analysis of Seismic Activity Around the February 6, 2023 Earthquake
 
-**Course:** Spatio-Temporal Data Mining  
-**Dataset:** USGS Earthquake Catalog (2018–2024) | Kahramanmaraş Region, Türkiye  
-**Tools:** Python · H3 · USGS FDSNWS API · Pandas · Matplotlib · Scikit-learn
+**DI 722 Spatio-Temporal Data Mining Course - Term Project**
 
 ---
 
