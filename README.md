@@ -326,18 +326,25 @@ IQR flags an additional ~17 cells beyond the consensus region. These secondary a
 
 ---
 
-## 7. Limitations & Future Work
+## 7. Future Work
 
-### 7.1 Current Limitations
+This project establishes a baseline spatio-temporal anomaly detection framework for the 2023 Kahramanmaraş sequence using three statistical methods. The natural next step — as suggested — is applying more advanced methods to the same problem and dataset.
 
-- **Catalog completeness:** The USGS catalog threshold of M ≥ 2.0 may miss a significant portion of small aftershocks in the first weeks post-mainshock, when seismic station saturation and high coda noise suppress detection of smaller events. This could cause underestimation of post-seismic rates in the most active cells.
-- **Depth dimension ignored:** Current analysis treats earthquakes as 2D point events (latitude, longitude only). The 3D structure of the EAFZ — including depth-dependent clustering — is not captured by the surface H3 grid.
-- **Single temporal partition:** The analysis uses a single pre/post split at the mainshock date. A sliding-window temporal analysis would better characterize the time evolution of anomalous zones.
-- **No magnitude weighting:** All M ≥ 2.0 events are treated equally regardless of magnitude. Weighting by seismic moment would assign greater significance to larger events.
+### 7.1 Advanced Methods (Primary Direction)
 
-### 7.2 Future Work
+The current analysis treats each hexagon independently. More sophisticated approaches could capture spatial and temporal structure that our baseline methods miss:
 
-- Apply **temporal sliding windows** to track the decay of anomalous zones over time and compare with Modified Omori Law predictions (Tan, 2025).
-- Incorporate **depth-stratified H3 analysis** using 3D hexagonal prisms to capture vertical fault structure.
-- Test **additional resolution levels** (H3 Resolution 7, ~8 km²) to assess whether finer granularity further resolves sub-fault-segment anomaly patterns.
-- Compare detected anomaly zones with **Coulomb stress change models** of the Pazarcık and Elbistan mainshocks to assess whether anomalous cells correspond to zones of positive stress loading.
+- **ST-DBSCAN (Spatio-Temporal DBSCAN):** Instead of flagging individual hexagons, ST-DBSCAN evaluates clusters of neighboring hexagons together in both space and time. This would better capture the spatial coherence of anomaly zones and potentially reveal secondary fault structures not visible in the per-hexagon analysis.
+
+- **Kernel Density Estimation (KDE):** Rather than discrete hexagonal boundaries, KDE produces a continuous density surface across the study area. This would show smooth anomaly gradients along the fault trace instead of binary anomalous/normal labels.
+
+- **Time Series Analysis (STL / ARIMA):** Applying time series decomposition to each hexagon's monthly event count would reveal how individual zones activate and decay over time — answering "when did each zone become anomalous, and for how long?"
+
+- **Spatial Autocorrelation (Moran's I):** Quantifying whether anomalous hexagons cluster spatially more than expected by chance. A high Moran's I would statistically confirm that our detected pattern is not random.
+
+### 7.2 Methodological Extensions
+
+- **Finer H3 resolution:** Testing Resolution 7 (~8 km²) to assess whether individual fault segments produce distinct anomaly signatures not visible at Resolution 6.
+- **Magnitude weighting:** Weighting events by seismic moment rather than treating all M ≥ 2.0 events equally.
+- **Depth dimension:** Adding depth as a third spatial axis to capture the 3D fault structure beyond its surface projection.
+- **Coulomb stress comparison:** Overlaying detected anomaly zones with Coulomb stress change models of the Pazarcık and Elbistan mainshocks to assess physical consistency.
