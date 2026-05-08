@@ -89,7 +89,6 @@ event comparison across the study period (2018–2024).*
 
 > Tan, O. (2025). Long-term aftershock properties of the catastrophic 6 February 2023 Kahramanmaraş (Türkiye) earthquake sequence. *Acta Geophysica*, 73, 1023–1040. https://doi.org/10.1007/s11600-024-01419-y
 
-![Paper1](lit_review_1.png)
 <p align="center">
   <img src="lit_review_1.png" width="80%">
 </p>
@@ -110,7 +109,9 @@ Key findings directly relevant to this project:
 
 > Derode, B., Madariaga, R., & Campos, J. (2021). Seismic rate variations prior to the 2010 Maule, Chile MW 8.8 giant megathrust earthquake. *Scientific Reports*, 11, 2705. https://doi.org/10.1038/s41598-021-82152-0
 
-![Paper2](lit_review_2.png)
+<p align="center">
+  <img src="lit_review_2.png" width="80%">
+</p>
 
 Derode et al. introduce a **spatial-temporal seismic rate comparison framework** in which the coseismic rupture zone (IN-zone) is compared against an area-equivalent surrounding zone (OUT-zone) across multiple time windows. By computing normalized cumulative seismic rates (events/year) per spatial zone, they detect a 2–3 year pre-seismic quiescence inside the future rupture area — an anomalous rate decrease not visible in the surrounding zone — followed by a short-lived foreshock burst days before the mainshock.
 
@@ -128,7 +129,9 @@ Key methodological contributions:
 
 > Aini, A. N., Dewantari, O. A., Mandala, D. P. A., & Bisri, M. B. F. (2023). An enhanced earthquake risk analysis using H3 spatial indexing. *IOP Conference Series: Earth and Environmental Science*, 1245, 012014. https://doi.org/10.1088/1755-1315/1245/1/012014
 
-![Paper3](lit_review_3.png)
+<p align="center">
+  <img src="lit_review_3.png" width="80%">
+</p>
 
 Aini et al. present one of the first direct applications of the H3 Discrete Global Grid System (DGGS) to earthquake risk assessment, using Sorong City, Indonesia as a case study. The study compares H3-based risk maps against traditional administrative-boundary-based assessments (BNPB IRBI method), evaluating performance across statistical, visual, and SWOT dimensions.
 
