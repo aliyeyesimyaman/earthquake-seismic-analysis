@@ -195,7 +195,7 @@ A key design decision in any H3-based analysis is the choice of spatial resoluti
 | Approximate cell area | ~252 km² | ~44 km² |
 | Total hexagons in study area | 128 | 339 |
 | Anomalous hexagons (Mean+2σ) | 4 | 15 |
-| Anomaly rate | ~4.4% | ~4.4% |
+| Anomaly rate | ~3.1% | ~4.4% |
 
 ![H3 Resolution Comparison](H3_resolution_comparison.png)
 <p align="center"><sub>Figure 2 — H3 Resolution Comparison (Mean + 2σ baseline)</sub></p>
