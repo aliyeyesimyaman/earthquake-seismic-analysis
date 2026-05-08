@@ -168,6 +168,7 @@ This value forms the basis for all three anomaly detection methods.
 **H3 Hexagonal Density Map:**
 
 ![H3 Density Map](H3_density_map.png)
+<p align="center"><sub>Figure 1 — H3 Density Maps</sub></p>
 
 ### 4.3 Resolution Comparison: Res 5 vs Res 6
 
@@ -181,7 +182,7 @@ A key design decision in any H3-based analysis is the choice of spatial resoluti
 | Anomaly rate | ~4.4% | ~4.4% |
 
 ![H3 Resolution Comparison](H3_resolution_comparison.png)
-<p align="center"><sub>Figure 1 — H3 Resolution Comparison (Mean + 2σ baseline)</sub></p>
+<p align="center"><sub>Figure 2 — H3 Resolution Comparison (Mean + 2σ baseline)</sub></p>
 
 The results reveal a clear scale effect:
 
@@ -248,7 +249,7 @@ The `contamination=0.05` parameter instructs the model to treat approximately 5%
 ### 5.5 Method Comparison
 
 ![Method Comparison](model_comparison.png)
-<p align="center"><sub>Figure 2 — Baseline Method Comparison at Resolution 6</sub></p>
+<p align="center"><sub>Figure 3 — Baseline Method Comparison at Resolution 6</sub></p>
 
 | Method | Anomalous Cells | Rate | Characteristic |
 |---|---|---|---|
@@ -269,7 +270,7 @@ The `contamination=0.05` parameter instructs the model to treat approximately 5%
 After temporal partitioning at the mainshock date (6 February 2023) and spatial discretization at H3 Resolution 6, the rate-change distribution across 341 hexagons is strongly right-skewed: the overwhelming majority of cells show negligible rate change, while a small subset exhibits dramatic post-seismic increases. This distributional asymmetry is characteristic of fault-proximal aftershock sequences and motivates the use of upper-tail anomaly detection methods (Mean+2σ and IQR) rather than two-tailed tests.
 
 ![Seismic Rate Comparison](seismic_rate_comparison.png)
-<p align="center"><sub>Figure 3 — Normalized Monthly Rate Change</sub></p>
+<p align="center"><sub>Figure 4 — Normalized Monthly Rate Change</sub></p>
 
 ### 6.2 H3 Resolution Effect on Anomaly Detection
 
@@ -283,17 +284,15 @@ Applying the Mean + 2σ baseline at both Resolution 5 and Resolution 6 reveals a
 | Spatial pattern | Isolated, incoherent | Linear, fault-aligned |
 | EAFZ geometry visible | ❌ | ✅ |
 
-**Figure 2 — Resolution 5 vs Resolution 6 (Mean + 2σ)**
-
 ![H3 Resolution Comparison](H3_resolution_comparison.png)
+<p align="center"><sub>Figure 5 — H3 Resolution Comparison (Mean + 2σ baseline)</sub></p>
 
 At Resolution 5, the four anomalous cells are geographically scattered with no apparent structural alignment. At Resolution 6, the 15 anomalous cells form a coherent east-west linear cluster near 38°N latitude, consistent with the surface trace of the East Anatolian Fault Zone as mapped by Tan (2025) and the USGS finite fault models of the Pazarcık and Elbistan mainshocks.
 
 ### 6.3 Baseline Method Comparison at Resolution 6
 
-**Figure 3 — Method Comparison (Resolution 6)**
-
 ![Method Comparison](model_comparison.png)
+<p align="center"><sub>Figure 6 — Baseline Method Comparison at Resolution 6</sub></p>
 
 | Method | Anomalous Cells | Rate | Notes |
 |---|---|---|---|
