@@ -90,6 +90,9 @@ event comparison across the study period (2018–2024).*
 > Tan, O. (2025). Long-term aftershock properties of the catastrophic 6 February 2023 Kahramanmaraş (Türkiye) earthquake sequence. *Acta Geophysica*, 73, 1023–1040. https://doi.org/10.1007/s11600-024-01419-y
 
 ![Paper1](lit_review_1.png)
+<p align="center">
+  <img src="lit_review_1.png" width="80%">
+</p>
 
 This study provides the most comprehensive spatial characterization of the 2023 Kahramanmaraş earthquake sequence to date. Using the double-difference (hypoDD) relocation algorithm on ~50,000 events, Tan relocates approximately 30,939 aftershocks with improved precision, revealing the fault geometry of the East Anatolian Fault Zone (EAFZ) and Çardak fault in unprecedented detail.
 
