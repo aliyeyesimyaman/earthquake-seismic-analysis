@@ -63,6 +63,12 @@ The mainshock date (6 February 2023) partitions the catalog into two analysis wi
 │               ~61 months                     │    ~11 months     │
 ```
 
+### Temporal Window Selection
+
+The pre-earthquake window (2018–2023) was selected to capture a stable background seismicity reference period. Starting from 2018 ensures sufficient catalog completeness and station coverage in the region, while avoiding contamination from earlier seismic sequences. The ~61-month window provides a robust baseline for computing reliable monthly seismic rates.
+
+The post-earthquake window extends to January 2024, capturing approximately 11 months of post-seismic activity — sufficient to cover the primary aftershock decay phase as described by the Modified Omori Law (Tan, 2025).
+
 Monthly seismic rates are computed separately per window and **normalized to events/month** to ensure fair comparison despite the unequal durations.
 
 **Raw Dataset (USGS CSV output):**
