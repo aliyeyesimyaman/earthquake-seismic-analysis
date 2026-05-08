@@ -296,7 +296,7 @@ Applying the Mean + 2σ baseline at both Resolution 5 and Resolution 6 reveals a
 |---|---|---|
 | Total hexagons | 128 | 339 |
 | Anomalous hexagons | 4 | 15 |
-| Anomaly rate | ~4.4% | 4.4% |
+| Anomaly rate | 3.1% | 4.4% |
 | Spatial pattern | Isolated, incoherent | Linear, fault-aligned |
 | EAFZ geometry visible | ❌ | ✅ |
 
