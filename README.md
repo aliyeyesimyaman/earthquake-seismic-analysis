@@ -180,10 +180,6 @@ A key design decision in any H3-based analysis is the choice of spatial resoluti
 | Anomalous hexagons (Mean+2σ) | 4 | 15 |
 | Anomaly rate | ~4.4% | ~4.4% |
 
-**Figure 1 — H3 Resolution Comparison (Mean + 2σ baseline)**
-
-![H3 Resolution Comparison](H3_resolution_comparison.png)
-
 ![H3 Resolution Comparison](H3_resolution_comparison.png)
 <p align="center"><sub>Figure 1 — H3 Resolution Comparison (Mean + 2σ baseline)</sub></p>
 
@@ -251,9 +247,8 @@ The `contamination=0.05` parameter instructs the model to treat approximately 5%
 
 ### 5.5 Method Comparison
 
-**Figure 2 — Baseline Method Comparison at Resolution 6**
-
 ![Method Comparison](model_comparison.png)
+<p align="center"><sub>Figure 2 — Baseline Method Comparison at Resolution 6</sub></p>
 
 | Method | Anomalous Cells | Rate | Characteristic |
 |---|---|---|---|
@@ -273,9 +268,8 @@ The `contamination=0.05` parameter instructs the model to treat approximately 5%
 
 After temporal partitioning at the mainshock date (6 February 2023) and spatial discretization at H3 Resolution 6, the rate-change distribution across 341 hexagons is strongly right-skewed: the overwhelming majority of cells show negligible rate change, while a small subset exhibits dramatic post-seismic increases. This distributional asymmetry is characteristic of fault-proximal aftershock sequences and motivates the use of upper-tail anomaly detection methods (Mean+2σ and IQR) rather than two-tailed tests.
 
-**Figure 1 — Normalized Monthly Rate Change**
-
 ![Seismic Rate Comparison](seismic_rate_comparison.png)
+<p align="center"><sub>Figure 3 — Normalized Monthly Rate Change</sub></p>
 
 ### 6.2 H3 Resolution Effect on Anomaly Detection
 
