@@ -16,7 +16,7 @@ The disaster affected 11 provinces — including Kahramanmaraş, Hatay, Adıyama
 
 Major earthquakes do not simply release stress — they fundamentally reorganize it. The 6 February 2023 sequence triggered one of the largest and most spatially extensive aftershock sequences recorded in modern Turkish seismological history, with over 50,000 aftershocks detected in the nine months following the mainshock (Tan, 2025). Identifying **where** and **how significantly** this spatial reorganization of seismicity occurred is both scientifically meaningful and directly relevant to ongoing seismic hazard assessment in the region.
 
-This project addresses the following core question:
+This project addresses the following core research question:
 
 > **Which spatial zones of the Kahramanmaraş region experienced statistically anomalous increases in seismic activity following the 6 February 2023 earthquake sequence, and does the detected pattern align with the known fault geometry of the East Anatolian Fault Zone?**
 
