@@ -1,4 +1,4 @@
-# Spatio-Temporal Analysis of Seismic Activity Around the 2023 Kahramanmaraş Earthquake
+# Spatial-Temporal Analysis of Seismic Activity Around the February 6, 2023 Earthquake
 
 **Course:** Spatio-Temporal Data Mining  
 **Dataset:** USGS Earthquake Catalog (2018–2024) | Kahramanmaraş Region, Türkiye  
