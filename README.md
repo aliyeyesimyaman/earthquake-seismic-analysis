@@ -283,7 +283,7 @@ The `contamination=0.05` parameter instructs the model to treat approximately 5%
 
 ### 6.1 Seismic Rate Change Distribution
 
-After temporal partitioning at the mainshock date (6 February 2023) and spatial discretization at H3 Resolution 6, the rate-change distribution across 341 hexagons is strongly right-skewed: the overwhelming majority of cells show negligible rate change, while a small subset exhibits dramatic post-seismic increases. This distributional asymmetry is characteristic of fault-proximal aftershock sequences and motivates the use of upper-tail anomaly detection methods (Mean+2σ and IQR) rather than two-tailed tests.
+After temporal partitioning at the mainshock date (6 February 2023) and spatial discretization at H3 Resolution 6, the rate-change distribution across 339 hexagons is strongly right-skewed: the overwhelming majority of cells show negligible rate change, while a small subset exhibits dramatic post-seismic increases. This distributional asymmetry is characteristic of fault-proximal aftershock sequences and motivates the use of upper-tail anomaly detection methods (Mean+2σ and IQR) rather than two-tailed tests.
 
 ![Seismic Rate Comparison](seismic_rate_comparison.png)
 <p align="center"><sub>Figure 4 — Normalized Monthly Rate Change</sub></p>
@@ -294,7 +294,7 @@ Applying the Mean + 2σ baseline at both Resolution 5 and Resolution 6 reveals a
 
 | Metric | Resolution 5 (~252 km²) | Resolution 6 (~44 km²) |
 |---|---|---|
-| Total hexagons | ~90 | 341 |
+| Total hexagons | 128 | 339 |
 | Anomalous hexagons | 4 | 15 |
 | Anomaly rate | ~4.4% | 4.4% |
 | Spatial pattern | Isolated, incoherent | Linear, fault-aligned |
