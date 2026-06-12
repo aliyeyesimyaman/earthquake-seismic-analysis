@@ -609,5 +609,66 @@ This convergence provides additional confidence that the detected anomaly zones 
 
 > The strong spatial agreement between the two methods suggests that the identified anomaly regions represent both clustered and temporally unusual seismic activity, reinforcing their significance for subsequent consensus analysis.
 
+<br>
+
+## 7.6 Overall Results & Final Consensus Analysis
+
+Five complementary anomaly detection approaches were applied to the same H3 Resolution 6 grid:
+
+| Method | Anomalous Cells | Rate | Characteristic |
+|----------|----------:|----------:|----------|
+| Mean + 2σ | 15 | 4.4% | Interpretable statistical baseline |
+| IQR | 32 | 9.4% | Robust but sensitive to skewed data |
+| Isolation Forest | 16 | 4.7% | Unsupervised ML anomaly detection |
+| Spatio-Temporal DBSCAN | 38 | 11.2% | Density-based cluster detection |
+| LSTM Forecasting | 23 | 6.8% | Neural forecasting residual anomaly |
+
+### Spatial Agreement Across Methods
+
+Although the methods rely on different assumptions and detection mechanisms, a strong spatial agreement emerges.
+
+- Mean+2σ and Isolation Forest identify a compact set of highly anomalous cells.
+- IQR detects a broader anomaly footprint due to the right-skewed rate-change distribution.
+- DBSCAN highlights regions dominated by dense spatio-temporal earthquake clusters.
+- LSTM identifies cells where post-earthquake activity significantly exceeds learned historical expectations.
+
+Despite these methodological differences, all approaches consistently concentrate anomalies along the East Anatolian Fault Zone (EAFZ), particularly within the main aftershock corridor activated after the 6 February 2023 earthquake sequence.
+
+This convergence suggests that the detected anomalies are not artifacts of any single method, but represent robust spatial signatures of post-seismic reorganization.
+
+### Final Consensus Analysis
+
+To identify the most reliable anomaly locations, a consensus framework was constructed.
+
+Each H3 cell receives one vote from every method that flags it as anomalous:
+
+Consensus Score = Number of methods detecting the same cell
+
+Possible scores range from:
+
+- 0 → detected by none of the methods
+- 5 → detected by all methods
+
+Cells with higher consensus scores represent locations where multiple independent detection strategies agree that seismic activity changed abnormally after the mainshock.
+
+### Interpretation
+
+The highest-consensus cells form a coherent spatial cluster along the northern EAFZ segment near Kahramanmaraş, coinciding with the principal aftershock zone reported in seismological studies.
+
+This result is particularly important because:
+
+1. Statistical methods (Mean+2σ, IQR),
+2. Machine learning methods (Isolation Forest, LSTM),
+3. Density-based clustering (DBSCAN)
+
+all independently identify largely overlapping regions.
+
+The final consensus map therefore provides the strongest evidence of post-earthquake seismic reorganization within the study area.
+
+### Key Finding
+
+The most robust anomalous zones are those repeatedly detected by multiple independent methods. These zones align closely with the known geometry of the East Anatolian Fault Zone and the major aftershock concentrations observed following the 6 February 2023 Kahramanmaraş earthquake sequence.
+
+The consensus analysis confirms that the detected anomaly pattern is spatially coherent, methodologically stable, and geologically meaningful.
 
 
