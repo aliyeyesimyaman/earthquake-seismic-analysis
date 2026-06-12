@@ -86,6 +86,9 @@ Monthly seismic rates are computed separately per window and **normalized to eve
   <img src="lit_review_2.png" width="80%">
 </p>
 
+![Seismic Rate Comparison](seismic_rate_comparison.png)
+<p align="center"><sub>Figure 4 — Normalized Monthly Rate Change</sub></p>
+
 **Exploratory Data Analysis:**
 *Monthly event count, magnitude distribution, and pre/post 
 event comparison across the study period (2018–2024).*
