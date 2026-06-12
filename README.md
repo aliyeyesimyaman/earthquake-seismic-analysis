@@ -378,7 +378,7 @@ This pattern is consistent with the expected aftershock decay process described 
 
 ![TDA_graph](TDA_graph.png)
 
-### Coefficient of Variation (CV)
+### *Coefficient of Variation (CV)*
 
 To quantify temporal clustering, the coefficient of variation (CV) of inter-event times was calculated:
 
