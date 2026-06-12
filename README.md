@@ -42,7 +42,7 @@ Seismicity data is sourced from the **USGS ANSS Comprehensive Earthquake Catalog
 | API Endpoint | `https://earthquake.usgs.gov/fdsnws/event/1/query` |
 | Spatial Extent | 35.5°N–38.5°N, 35.0°E–39.0°E |
 | Temporal Extent | 2018-01-01 — 2024-01-01 |
-| Magnitude Threshold | M ≥ 2.0 |
+| Magnitude Threshold | M ≥ 3.0 |
 | Format | CSV |
 
 Each row in the catalog is a **point event in space-time**, carrying the following fields used in this analysis:
