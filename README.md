@@ -96,7 +96,7 @@ event comparison across the study period (2018–2024).*
 ![EDA Graphs](eda.png)
 
 <br>
----
+
 ## 3. Literature Review
 
 ### 3.1 Tan (2025) — Long-term Aftershock Properties of the 2023 Kahramanmaraş Sequence
