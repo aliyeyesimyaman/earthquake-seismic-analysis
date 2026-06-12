@@ -344,16 +344,6 @@ IQR flags an additional ~17 cells beyond the consensus region. These secondary a
 
 To complement the baseline anomaly-detection framework, two studies from the recent seismological literature were reviewed.
 
-### Sharma (2023) - Identification and spatio-temporal analysis of earthquake clusters using SOM–DBSCAN model
-
-> Sharma, A., Vijay, R. K., & Nanda, S. J. (2023). Identification and spatio-temporal analysis of earthquake clusters using SOM–DBSCAN model. Neural Computing and Applications, 35(11), 8081-8108.
-
-Sharma et al. proposed a spatio-temporal earthquake clustering framework based on SOM and DBSCAN. Although the SOM component was not adopted in this project, the study motivated the use of temporal validation diagnostics, including cumulative-event curves, seismicity-rate (lambda) plots, and the coefficient of variation (CV) of inter-event times. The paper also provided methodological inspiration for event-level spatio-temporal clustering using DBSCAN.
-
-<p align="center">
-  <img src="lit_review_4.png" width="80%">
-</p>
-
 ### Zlydenko (2023) - A neural encoder for earthquake rate forecasting
 
 >Zlydenko, O., Elidan, G., Hassidim, A., Kukliansky, D., Matias, Y., Meade, B., ... & Bar-Sinai, Y. (2023). A neural encoder for earthquake rate forecasting. Scientific reports, 13(1), 12350.
@@ -365,6 +355,20 @@ Together, these studies motivated the addition of clustering-based and neural fo
 <p align="center">
   <img src="lit_review_2.png" width="80%">
 </p>
+
+<br>
+
+### Sharma (2023) - Identification and spatio-temporal analysis of earthquake clusters using SOM–DBSCAN model
+
+> Sharma, A., Vijay, R. K., & Nanda, S. J. (2023). Identification and spatio-temporal analysis of earthquake clusters using SOM–DBSCAN model. Neural Computing and Applications, 35(11), 8081-8108.
+
+Sharma et al. proposed a spatio-temporal earthquake clustering framework based on SOM and DBSCAN. Although the SOM component was not adopted in this project, the study motivated the use of temporal validation diagnostics, including cumulative-event curves, seismicity-rate (lambda) plots, and the coefficient of variation (CV) of inter-event times. The paper also provided methodological inspiration for event-level spatio-temporal clustering using DBSCAN.
+
+<p align="center">
+  <img src="lit_review_4.png" width="80%">
+</p>
+
+
 
 ### 7.2 Advanced Temporal Diagnostics
 
@@ -412,7 +416,74 @@ The pre-earthquake period ($CV = 1.32$) is relatively close to random background
 
 These results demonstrate that the post-earthquake catalog is highly clustered in time rather than randomly distributed, providing strong motivation for applying cluster-oriented methods such as ST-DBSCAN.
 
-### 7.3 Method 4 — Spatio-Temporal DBSCAN
+<br>
+
+### 7.4 Method 5 — LSTM-based Seismic Forecasting
+
+The previous methods identify anomalous H3 cells based on observed seismic-rate changes or clustering behavior. However, they do not explicitly model how seismic activity is expected to evolve over time.
+
+To address this limitation, a Long Short-Term Memory (LSTM) neural network was introduced. Rather than detecting anomalies directly from rate changes, the LSTM attempts to learn the temporal dynamics of seismic activity and forecast expected future seismic rates.
+
+Cells whose observed post-earthquake activity substantially exceeds the model prediction are treated as anomalous.
+
+---
+
+### Architecture
+
+A simple LSTM forecasting model was trained using monthly seismicity sequences derived from the earthquake catalog.
+
+Model configuration:
+
+| Parameter | Value |
+|------------|--------:|
+| Lookback window | 6 months |
+| Training samples | 18,984 |
+| Epochs | 11 |
+| Training loss | 0.0123 |
+| Validation loss | 0.0112 |
+
+The model learns the relationship between recent seismic activity and future monthly earthquake counts.
+
+---
+
+### Forecast Residuals
+
+For each H3 cell, the trained LSTM predicts the expected post-earthquake monthly seismic rate.
+
+The forecasting residual is defined as:
+
+$$
+Residual = |Observed - Predicted|
+$$
+
+Cells with unusually large residuals indicate locations where observed seismicity significantly exceeds the expected behavior learned from historical patterns.
+
+These residuals therefore serve as an anomaly score.
+
+---
+
+### H3 Aggregation
+
+Residuals were aggregated at Resolution-6 H3 cells.
+
+A cell was classified as anomalous when its forecasting residual exceeded the selected residual threshold.
+
+Results:
+
+| Metric | Value |
+|---------|-------:|
+| Active H3 cells | 339 |
+| LSTM-anomalous H3 cells | 23 |
+| Rate | 6.8% |
+
+![LSTM_H3_cells](LSTM_H3_cells.png)
+
+The resulting anomaly map highlights several concentrated regions along the East Anatolian Fault Zone where post-earthquake seismicity greatly exceeded the levels predicted by the neural forecasting model.
+
+<br>
+
+
+### 7.4 Validation Method — Spatio-Temporal DBSCAN
 
 While the baseline methods focus on changes in seismic rates at the H3-cell level, they do not explicitly consider the clustering behavior of individual earthquake events.
 
@@ -500,76 +571,12 @@ The resulting map highlights spatial zones where seismicity is primarily driven 
 
 <br>
 
-### 7.4 Method 5 — LSTM-based Seismic Forecasting
-
-The previous methods identify anomalous H3 cells based on observed seismic-rate changes or clustering behavior. However, they do not explicitly model how seismic activity is expected to evolve over time.
-
-To address this limitation, a Long Short-Term Memory (LSTM) neural network was introduced. Rather than detecting anomalies directly from rate changes, the LSTM attempts to learn the temporal dynamics of seismic activity and forecast expected future seismic rates.
-
-Cells whose observed post-earthquake activity substantially exceeds the model prediction are treated as anomalous.
-
----
-
-### Architecture
-
-A simple LSTM forecasting model was trained using monthly seismicity sequences derived from the earthquake catalog.
-
-Model configuration:
-
-| Parameter | Value |
-|------------|--------:|
-| Lookback window | 6 months |
-| Training samples | 18,984 |
-| Epochs | 11 |
-| Training loss | 0.0123 |
-| Validation loss | 0.0112 |
-
-The model learns the relationship between recent seismic activity and future monthly earthquake counts.
-
----
-
-### Forecast Residuals
-
-For each H3 cell, the trained LSTM predicts the expected post-earthquake monthly seismic rate.
-
-The forecasting residual is defined as:
-
-$$
-Residual = |Observed - Predicted|
-$$
-
-Cells with unusually large residuals indicate locations where observed seismicity significantly exceeds the expected behavior learned from historical patterns.
-
-These residuals therefore serve as an anomaly score.
-
----
-
-### H3 Aggregation
-
-Residuals were aggregated at Resolution-6 H3 cells.
-
-A cell was classified as anomalous when its forecasting residual exceeded the selected residual threshold.
-
-Results:
-
-| Metric | Value |
-|---------|-------:|
-| Active H3 cells | 339 |
-| LSTM-anomalous H3 cells | 23 |
-| Rate | 6.8% |
-
-![LSTM_H3_cells](LSTM_H3_cells.png)
-
-The resulting anomaly map highlights several concentrated regions along the East Anatolian Fault Zone where post-earthquake seismicity greatly exceeded the levels predicted by the neural forecasting model.
-
-<br>
-
 ### 7.5 Advanced Method Comparison
 
 | Method | Flagged Cells | Rate | Primary Purpose |
 |----------|----------:|----------:|----------|
-| ST-DBSCAN | 38 | 11.2% | Detect spatio-temporal earthquake clusters |
 | LSTM Forecasting | 23 | 6.8% | Detect unexpected seismic activity through forecasting residuals |
+| ST-DBSCAN | 38 | 11.2% | Detect spatio-temporal earthquake clusters |
 
 ![DBSCAN_LSTM_H3_cells](DBSCAN_LSTM_H3_cells.png)
 
