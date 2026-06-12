@@ -571,7 +571,7 @@ The resulting map highlights spatial zones where seismicity is primarily driven 
 
 <br>
 
-### 7.5 Advanced Method Comparison
+### 7.6 Advanced Method Comparison
 
 | Method | Flagged Cells | Rate | Primary Purpose |
 |----------|----------:|----------:|----------|
