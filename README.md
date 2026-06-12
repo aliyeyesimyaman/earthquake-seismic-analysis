@@ -356,6 +356,52 @@ Together, these studies motivated the addition of clustering-based and neural fo
   <img src="lit_review_2.png" width="80%">
 </p>
 
+## 7.2 Advanced Temporal Diagnostics
+
+Before applying advanced anomaly detection methods, several temporal diagnostics were performed to evaluate whether the Kahramanmaraş earthquake sequence exhibits non-stationary and clustered seismic behavior. These analyses were inspired by temporal validation procedures commonly used in SOM-DBSCAN-based seismicity studies.
+
+### *Cumulative Number of Earthquakes*
+
+The cumulative earthquake count curve illustrates the temporal evolution of seismic activity across the study period.
+
+The vertical dashed line marks the 6 February 2023 Mw 7.8 mainshock. Prior to the earthquake sequence, the cumulative curve increases slowly and approximately linearly, indicating relatively stable background seismicity. Immediately after the mainshock, the slope increases dramatically, reflecting the onset of an intense aftershock sequence.
+
+This abrupt change confirms that the earthquake sequence fundamentally altered the temporal behavior of seismicity within the region.
+
+### Lambda Plot (Monthly Seismicity Rate)
+
+The monthly seismicity rate, denoted by λ(t), was computed as the number of earthquakes occurring each month.
+
+The λ curve remains relatively low and stable throughout the pre-earthquake period. Following the February 2023 earthquake sequence, a sharp spike is observed, after which seismicity gradually decreases but remains substantially above pre-earthquake levels.
+
+This pattern is consistent with the expected aftershock decay process described by the Modified Omori Law and provides quantitative evidence of strong post-seismic activation.
+
+![TDA_graph1](TDA_graph1.png)
+
+### Coefficient of Variation (CV)
+
+To quantify temporal clustering, the coefficient of variation (CV) of inter-event times was calculated:
+
+$$
+CV = \frac{\sigma_{\Delta t}}{\mu_{\Delta t}}
+$$
+
+where $\Delta t$ denotes the time interval between consecutive earthquakes.
+
+| Period | Events | CV |
+|----------|----------:|----------:|
+| All Data | 634 | 4.45 |
+| Pre-earthquake | 62 | 1.32 |
+| Post-earthquake | 572 | 3.58 |
+
+A Poisson-like random process typically exhibits $CV \approx 1$.
+
+![TDA_graph1](TDA_graph1.png)
+
+The pre-earthquake period ($CV = 1.32$) is relatively close to random background seismicity, whereas the post-earthquake period ($CV = 3.58$) indicates strong temporal clustering. Considering the entire catalog, the CV rises to 4.45 due to the extreme concentration of aftershocks immediately following the mainshock sequence.
+
+These results demonstrate that the post-earthquake catalog is highly clustered in time rather than randomly distributed, providing strong motivation for applying cluster-oriented methods such as ST-DBSCAN.
+
 
 
 
