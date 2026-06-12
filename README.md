@@ -343,7 +343,7 @@ IQR flags an additional ~17 cells beyond the consensus region. These secondary a
 
 To complement the baseline anomaly-detection framework, two studies from the recent seismological literature were reviewed.
 
-### Zlydenko (2023) - A neural encoder for earthquake rate forecasting
+### *7.1.1 Zlydenko (2023) - A neural encoder for earthquake rate forecasting*
 
 >Zlydenko, O., Elidan, G., Hassidim, A., Kukliansky, D., Matias, Y., Meade, B., ... & Bar-Sinai, Y. (2023). A neural encoder for earthquake rate forecasting. Scientific reports, 13(1), 12350.
 
@@ -351,22 +351,13 @@ Zlydenko et al. explored neural-network-based earthquake rate forecasting. Inspi
 
 Together, these studies motivated the addition of clustering-based and neural forecasting-based analyses, extending the baseline statistical framework with complementary advanced methods.
 
-<p align="center">
-  <img src="lit_review_2.png" width="80%">
-</p>
-
 <br>
 
-### Sharma (2023) - Identification and spatio-temporal analysis of earthquake clusters using SOM–DBSCAN model
+### *7.1.2 Sharma (2023) - Identification and spatio-temporal analysis of earthquake clusters using SOM–DBSCAN model*
 
 > Sharma, A., Vijay, R. K., & Nanda, S. J. (2023). Identification and spatio-temporal analysis of earthquake clusters using SOM–DBSCAN model. Neural Computing and Applications, 35(11), 8081-8108.
 
 Sharma et al. proposed a spatio-temporal earthquake clustering framework based on SOM and DBSCAN. Although the SOM component was not adopted in this project, the study motivated the use of temporal validation diagnostics, including cumulative-event curves, seismicity-rate (lambda) plots, and the coefficient of variation (CV) of inter-event times. The paper also provided methodological inspiration for event-level spatio-temporal clustering using DBSCAN.
-
-<p align="center">
-  <img src="lit_review_4.png" width="80%">
-</p>
-
 
 
 ### 7.2 Advanced Temporal Diagnostics
@@ -420,6 +411,10 @@ These results demonstrate that the post-earthquake catalog is highly clustered i
 ### 7.3 Method 4 — LSTM-based Seismic Forecasting
 
 The previous methods identify anomalous H3 cells based on observed seismic-rate changes or clustering behavior. However, they do not explicitly model how seismic activity is expected to evolve over time.
+
+<p align="center">
+  <img src="lit_review_2.png" width="80%">
+</p>
 
 To address this limitation, a Long Short-Term Memory (LSTM) neural network was introduced. Rather than detecting anomalies directly from rate changes, the LSTM attempts to learn the temporal dynamics of seismic activity and forecast expected future seismic rates.
 
@@ -485,6 +480,10 @@ The resulting anomaly map highlights several concentrated regions along the East
 ### 7.5 Validation Method — Spatio-Temporal DBSCAN
 
 While the baseline methods focus on changes in seismic rates at the H3-cell level, they do not explicitly consider the clustering behavior of individual earthquake events.
+
+<p align="center">
+  <img src="lit_review_4.png" width="80%">
+</p>
 
 To capture spatio-temporal earthquake clusters directly, a Density-Based Spatial Clustering of Applications with Noise (DBSCAN) approach was applied. DBSCAN is particularly suitable for seismicity analysis because it can identify arbitrarily shaped clusters while simultaneously distinguishing clustered events from background-like seismicity.
 
