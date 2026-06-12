@@ -358,6 +358,7 @@ Together, these studies motivated the addition of clustering-based and neural fo
 Sharma et al. proposed a spatio-temporal earthquake clustering framework based on SOM and DBSCAN. Although the SOM component was not adopted in this project, the study motivated the use of temporal validation diagnostics, including cumulative-event curves, seismicity-rate (lambda) plots, and the coefficient of variation (CV) of inter-event times. The paper also provided methodological inspiration for event-level spatio-temporal clustering using DBSCAN.
 
 <br>
+
 ### 7.2 Advanced Temporal Diagnostics
 
 Before applying advanced anomaly detection methods, several temporal diagnostics were performed to evaluate whether the Kahramanmaraş earthquake sequence exhibits non-stationary and clustered seismic behavior. These analyses were inspired by temporal validation procedures commonly used in SOM-DBSCAN-based seismicity studies.
