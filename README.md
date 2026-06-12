@@ -672,17 +672,3 @@ The final consensus map therefore provides the strongest evidence of post-earthq
 The most robust anomalous zones are those repeatedly detected by multiple independent methods. These zones align closely with the known geometry of the East Anatolian Fault Zone and the major aftershock concentrations observed following the 6 February 2023 Kahramanmaraş earthquake sequence.
 
 The consensus analysis confirms that the detected anomaly pattern is spatially coherent, methodologically stable, and geologically meaningful.
-
-consensus_table = (
-    res6_all["consensus_score"]
-    .value_counts()
-    .sort_index()
-    .reset_index()
-)
-
-consensus_table.columns = [
-    "Consensus Score",
-    "Cell Count"
-]
-
-print(consensus_table)
