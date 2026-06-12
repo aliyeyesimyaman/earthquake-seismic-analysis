@@ -328,6 +328,36 @@ IQR flags an additional ~17 cells beyond the consensus region. These secondary a
 
 > The 6 February 2023 Kahramanmaraş earthquake sequence produced a spatially coherent, fault-aligned pattern of anomalously elevated seismic activity concentrated along the East Anatolian Fault Zone. This pattern is detectable with all three baseline methods at H3 Resolution 6 (~44 km²), but not at Resolution 5 (~252 km²), demonstrating that spatial resolution is a critical parameter in spatio-temporal seismic anomaly detection.
 
+## 7. Advanced Methods
+
+## 7.1 Literature Review for Advanced Methods
+
+To complement the baseline anomaly-detection framework, two studies from the recent seismological literature were reviewed.
+
+### Sharma (2023) - Identification and spatio-temporal analysis of earthquake clusters using SOM–DBSCAN model
+
+Sharma et al. proposed a spatio-temporal earthquake clustering framework based on SOM and DBSCAN. Although the SOM component was not adopted in this project, the study motivated the use of temporal validation diagnostics, including cumulative-event curves, seismicity-rate (lambda) plots, and the coefficient of variation (CV) of inter-event times. The paper also provided methodological inspiration for event-level spatio-temporal clustering using DBSCAN.
+
+### Zlydenko (2023) - A neural encoder for earthquake rate forecasting
+
+Zlydenko et al. explored neural-network-based earthquake rate forecasting. Inspired by this forecasting perspective, we incorporated an LSTM-based neural rate forecasting approach to identify H3 cells whose post-earthquake seismic activity exceeded the level expected from historical seismicity patterns.
+
+Together, these studies motivated the addition of clustering-based and neural forecasting-based analyses, extending the baseline statistical framework with complementary advanced methods.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ---
 
 ## 7. Future Work
