@@ -402,6 +402,92 @@ The pre-earthquake period ($CV = 1.32$) is relatively close to random background
 
 These results demonstrate that the post-earthquake catalog is highly clustered in time rather than randomly distributed, providing strong motivation for applying cluster-oriented methods such as ST-DBSCAN.
 
+## 7.3 Method 4 — Spatio-Temporal DBSCAN
+
+While the baseline methods focus on changes in seismic rates at the H3-cell level, they do not explicitly consider the clustering behavior of individual earthquake events.
+
+To capture spatio-temporal earthquake clusters directly, a Density-Based Spatial Clustering of Applications with Noise (DBSCAN) approach was applied. DBSCAN is particularly suitable for seismicity analysis because it can identify arbitrarily shaped clusters while simultaneously distinguishing clustered events from background-like seismicity.
+
+Unlike the baseline methods, DBSCAN operates at the individual earthquake-event level before results are aggregated back to H3 cells.
+
+---
+
+### Parameter Selection
+
+DBSCAN requires two key parameters:
+
+- **eps**: neighborhood radius
+- **min_samples**: minimum number of neighboring events required to form a cluster
+
+Following common practice in the DBSCAN literature, a k-distance plot was used to determine a suitable value for the neighborhood radius.
+
+Parameters selected:
+
+| Parameter | Value |
+|------------|--------:|
+| eps | 0.45 |
+| min_samples | 5 |
+
+![k_distance](k_distance_plot.png)
+
+The k-distance plot shows the distance from each event to its 5th nearest neighbor after sorting all events by distance.
+
+The characteristic "elbow" appears near **eps ≈ 0.45**, representing the transition between dense seismic clusters and sparse background events. This value was therefore adopted as the DBSCAN neighborhood radius.
+
+The k-distance analysis provides a data-driven justification for parameter selection rather than relying on arbitrary thresholds.
+
+---
+
+### *Event-level Clustering*
+
+DBSCAN was applied to the earthquake catalog using spatial coordinates and temporal information.
+
+Results:
+
+| Metric | Value |
+|---------|-------:|
+| Total events | 634 |
+| Clustered events | 378 (59.6%) |
+| Noise events | 256 (40.4%) |
+| Detected clusters | 7 |
+
+![DBSCAN_event_clusters](DBSCAN_event_clusters.png)
+
+In the resulting event-level map, colored points represent clustered earthquakes, while gray points correspond to noise events interpreted as background-like seismicity.
+
+The largest cluster contains 331 events and spans much of the post-earthquake aftershock sequence, indicating strong spatio-temporal organization of seismic activity following the February 2023 rupture.
+
+---
+
+### *H3 Aggregation*
+
+Because the remainder of the analysis is conducted at the H3-cell level, DBSCAN outputs were aggregated back into Resolution-6 hexagons.
+
+For each H3 cell, the following quantities were computed:
+
+- total number of events,
+- number of clustered events,
+- number of noise events,
+- clustered-event ratio,
+- number of unique DBSCAN clusters.
+
+A cell was classified as **cluster-dominated** when:
+
+- at least 3 events were observed, and
+- at least 60% of events belonged to DBSCAN clusters.
+
+Results:
+
+| Metric | Value |
+|---------|-------:|
+| Active H3 cells | 339 |
+| Cluster-dominated H3 cells | 38 |
+| Rate | 11.2% |
+
+![DBSCAN_H3_cells](DBSCAN_H3_cells.png)
+
+The resulting map highlights spatial zones where seismicity is primarily driven by coherent earthquake clusters rather than isolated background events. Most cluster-dominated cells align with the East Anatolian Fault Zone and the main aftershock corridor identified in previous seismological studies.
+
 
 
 
