@@ -93,10 +93,9 @@ Monthly seismic rates are computed separately per window and **normalized to eve
 *Monthly event count, magnitude distribution, and pre/post 
 event comparison across the study period (2018–2024).*
 
-![EDA Graphs](graphs_eda.png)
+![EDA Graphs](eda.png)
 
-![EDA Graphs](eda_all_results.png)
-
+<br>
 ---
 ## 3. Literature Review
 
