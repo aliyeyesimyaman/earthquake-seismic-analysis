@@ -557,43 +557,55 @@ Results:
 
 The resulting anomaly map highlights several concentrated regions along the East Anatolian Fault Zone where post-earthquake seismicity greatly exceeded the levels predicted by the neural forecasting model.
 
+<br>
 
+## 7.5 Advanced Method Comparison
 
+| Method | Flagged Cells | Rate | Primary Purpose |
+|----------|----------:|----------:|----------|
+| ST-DBSCAN | 38 | 11.2% | Detect spatio-temporal earthquake clusters |
+| LSTM Forecasting | 23 | 6.8% | Detect unexpected seismic activity through forecasting residuals |
 
+Although both methods identify spatially significant regions, they approach the problem from fundamentally different perspectives.
 
-
-
-
-
-
-
-
-
-
-
-
+ST-DBSCAN focuses on event-level clustering and highlights areas dominated by organized earthquake sequences. In contrast, LSTM forecasting identifies locations where observed seismic activity substantially exceeds the levels expected from learned temporal patterns.
 
 ---
 
-## 7. Future Work
+### DBSCAN vs LSTM
 
-This project establishes a baseline spatio-temporal anomaly detection framework for the 2023 Kahramanmaraş sequence using three statistical methods. The natural next step — as suggested — is applying more advanced methods to the same problem and dataset.
+The ST-DBSCAN approach produces a larger set of flagged cells (38 cells) than the LSTM model (23 cells).
 
-### 7.1 Advanced Methods (Primary Direction)
+This difference is expected because DBSCAN is designed to detect dense spatio-temporal earthquake clusters, whereas LSTM focuses on forecasting errors and therefore highlights only the most difficult-to-predict regions.
 
-The current analysis treats each hexagon independently. More sophisticated approaches could capture spatial and temporal structure that our baseline methods miss:
+As a result:
 
-- **ST-DBSCAN (Spatio-Temporal DBSCAN):** Instead of flagging individual hexagons, ST-DBSCAN evaluates clusters of neighboring hexagons together in both space and time. This would better capture the spatial coherence of anomaly zones and potentially reveal secondary fault structures not visible in the per-hexagon analysis.
+- DBSCAN is more sensitive to cluster structure.
+- LSTM is more selective and emphasizes forecast-surprising activity.
+- Both methods concentrate anomalies along the East Anatolian Fault Zone.
 
-- **Kernel Density Estimation (KDE):** Rather than discrete hexagonal boundaries, KDE produces a continuous density surface across the study area. This would show smooth anomaly gradients along the fault trace instead of binary anomalous/normal labels.
+---
 
-- **Time Series Analysis (STL / ARIMA):** Applying time series decomposition to each hexagon's monthly event count would reveal how individual zones activate and decay over time — answering "when did each zone become anomalous, and for how long?"
+### Spatial Comparison
 
-- **Spatial Autocorrelation (Moran's I):** Quantifying whether anomalous hexagons cluster spatially more than expected by chance. A high Moran's I would statistically confirm that our detected pattern is not random.
+Despite their methodological differences, both approaches identify a remarkably similar spatial core.
 
-### 7.2 Methodological Extensions
+The strongest concentration of flagged cells appears along the northern segment of the East Anatolian Fault Zone, particularly near the main aftershock corridor activated following the February 2023 earthquake sequence.
 
-- **Finer H3 resolution:** Testing Resolution 7 (~8 km²) to assess whether individual fault segments produce distinct anomaly signatures not visible at Resolution 6.
-- **Magnitude weighting:** Weighting events by seismic moment rather than treating all M ≥ 2.0 events equally.
-- **Depth dimension:** Adding depth as a third spatial axis to capture the 3D fault structure beyond its surface projection.
-- **Coulomb stress comparison:** Overlaying detected anomaly zones with Coulomb stress change models of the Pazarcık and Elbistan mainshocks to assess physical consistency.
+Several regions detected by LSTM are also classified as cluster-dominated by ST-DBSCAN, indicating that the most significant seismic anomalies are simultaneously:
+
+1. part of organized earthquake clusters,
+2. difficult to explain using learned temporal patterns.
+
+This convergence provides additional confidence that the detected anomaly zones reflect genuine post-seismic reorganization rather than artifacts of a specific analytical method.
+
+
+
+> ST-DBSCAN and LSTM provide complementary perspectives on post-earthquake seismicity.
+
+> DBSCAN emphasizes the spatial organization of earthquake clusters, while LSTM emphasizes deviations from expected temporal behavior.
+
+> The strong spatial agreement between the two methods suggests that the identified anomaly regions represent both clustered and temporally unusual seismic activity, reinforcing their significance for subsequent consensus analysis.
+
+
+
