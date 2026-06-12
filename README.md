@@ -483,7 +483,7 @@ The resulting anomaly map highlights several concentrated regions along the East
 <br>
 
 
-### 7.4 Validation Method — Spatio-Temporal DBSCAN
+### 7.5 Validation Method — Spatio-Temporal DBSCAN
 
 While the baseline methods focus on changes in seismic rates at the H3-cell level, they do not explicitly consider the clustering behavior of individual earthquake events.
 
