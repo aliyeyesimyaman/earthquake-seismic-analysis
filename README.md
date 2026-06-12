@@ -368,7 +368,7 @@ The vertical dashed line marks the 6 February 2023 Mw 7.8 mainshock. Prior to th
 
 This abrupt change confirms that the earthquake sequence fundamentally altered the temporal behavior of seismicity within the region.
 
-### Lambda Plot (Monthly Seismicity Rate)
+### *Lambda Plot (Monthly Seismicity Rate)*
 
 The monthly seismicity rate, denoted by λ(t), was computed as the number of earthquakes occurring each month.
 
@@ -396,7 +396,7 @@ where $\Delta t$ denotes the time interval between consecutive earthquakes.
 
 A Poisson-like random process typically exhibits $CV \approx 1$.
 
-![TDA_graph1](TDA_graph1.png)
+![TDA_graph2](TDA_graph2.png)
 
 The pre-earthquake period ($CV = 1.32$) is relatively close to random background seismicity, whereas the post-earthquake period ($CV = 3.58$) indicates strong temporal clustering. Considering the entire catalog, the CV rises to 4.45 due to the extreme concentration of aftershocks immediately following the mainshock sequence.
 
