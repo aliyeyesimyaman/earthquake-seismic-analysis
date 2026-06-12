@@ -75,6 +75,8 @@ Monthly seismic rates are computed separately per window and **normalized to eve
 
 ![Raw Data](raw_data.png)
 
+<\n>
+
 **Processed Dataset (after cleaning & temporal partitioning):**
 *634 events · 6 columns · pre/post labels assigned*
 
