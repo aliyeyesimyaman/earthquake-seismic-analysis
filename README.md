@@ -99,7 +99,7 @@ event comparison across the study period (2018–2024).*
 
 ## 3. Literature Review
 
-### 3.1 Tan (2025) — Long-term Aftershock Properties of the 2023 Kahramanmaraş Sequence
+### *3.1 Tan (2025) — Long-term Aftershock Properties of the 2023 Kahramanmaraş Sequence*
 
 > Tan, O. (2025). Long-term aftershock properties of the catastrophic 6 February 2023 Kahramanmaraş (Türkiye) earthquake sequence. *Acta Geophysica*, 73, 1023–1040. https://doi.org/10.1007/s11600-024-01419-y
 
@@ -115,7 +115,7 @@ Key findings directly relevant to this project:
 
 ---
 
-### 3.2 Derode et al. (2021) — Seismic Rate Variations Prior to the 2010 Maule Mw 8.8 Earthquake
+### *3.2 Derode et al. (2021) — Seismic Rate Variations Prior to the 2010 Maule Mw 8.8 Earthquake*
 
 > Derode, B., Madariaga, R., & Campos, J. (2021). Seismic rate variations prior to the 2010 Maule, Chile MW 8.8 giant megathrust earthquake. *Scientific Reports*, 11, 2705. https://doi.org/10.1038/s41598-021-82152-0
 
@@ -131,7 +131,7 @@ Key methodological contributions:
 
 ---
 
-### 3.3 Aini et al. (2023) — Enhanced Earthquake Risk Analysis using H3 Spatial Indexing
+### *3.3 Aini et al. (2023) — Enhanced Earthquake Risk Analysis using H3 Spatial Indexing*
 
 > Aini, A. N., Dewantari, O. A., Mandala, D. P. A., & Bisri, M. B. F. (2023). An enhanced earthquake risk analysis using H3 spatial indexing. *IOP Conference Series: Earth and Environmental Science*, 1245, 012014. https://doi.org/10.1088/1755-1315/1245/1/012014
 
