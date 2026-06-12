@@ -566,6 +566,8 @@ The resulting anomaly map highlights several concentrated regions along the East
 | ST-DBSCAN | 38 | 11.2% | Detect spatio-temporal earthquake clusters |
 | LSTM Forecasting | 23 | 6.8% | Detect unexpected seismic activity through forecasting residuals |
 
+![DBSCAN_LSTM_H3_cells](DBSCAN_LSTM_H3_cells.png)
+
 Although both methods identify spatially significant regions, they approach the problem from fundamentally different perspectives.
 
 ST-DBSCAN focuses on event-level clustering and highlights areas dominated by organized earthquake sequences. In contrast, LSTM forecasting identifies locations where observed seismic activity substantially exceeds the levels expected from learned temporal patterns.
