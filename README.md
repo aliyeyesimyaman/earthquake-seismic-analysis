@@ -418,7 +418,7 @@ These results demonstrate that the post-earthquake catalog is highly clustered i
 
 <br>
 
-### 7.4 Method 5 — LSTM-based Seismic Forecasting
+### 7.3 Method 4 — LSTM-based Seismic Forecasting
 
 The previous methods identify anomalous H3 cells based on observed seismic-rate changes or clustering behavior. However, they do not explicitly model how seismic activity is expected to evolve over time.
 
