@@ -376,7 +376,7 @@ The λ curve remains relatively low and stable throughout the pre-earthquake per
 
 This pattern is consistent with the expected aftershock decay process described by the Modified Omori Law and provides quantitative evidence of strong post-seismic activation.
 
-![TDA_graph1](TDA_graph1.png)
+![TDA_graph](TDA_graph.png)
 
 ### Coefficient of Variation (CV)
 
