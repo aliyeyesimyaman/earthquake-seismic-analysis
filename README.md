@@ -330,6 +330,9 @@ IQR flags an additional ~17 cells beyond the consensus region. These secondary a
 
 > The 6 February 2023 Kahramanmaraş earthquake sequence produced a spatially coherent, fault-aligned pattern of anomalously elevated seismic activity concentrated along the East Anatolian Fault Zone. This pattern is detectable with all three baseline methods at H3 Resolution 6 (~44 km²), but not at Resolution 5 (~252 km²), demonstrating that spatial resolution is a critical parameter in spatio-temporal seismic anomaly detection.
 
+<br>
+<br>
+
 ## 7. Advanced Methods
 
 ## 7.1 Literature Review for Advanced Methods
@@ -489,6 +492,72 @@ Results:
 ![DBSCAN_H3_cells](DBSCAN_H3_cells.png)
 
 The resulting map highlights spatial zones where seismicity is primarily driven by coherent earthquake clusters rather than isolated background events. Most cluster-dominated cells align with the East Anatolian Fault Zone and the main aftershock corridor identified in previous seismological studies.
+
+<br>
+
+## 7.4 Method 5 — LSTM-based Seismic Forecasting
+
+The previous methods identify anomalous H3 cells based on observed seismic-rate changes or clustering behavior. However, they do not explicitly model how seismic activity is expected to evolve over time.
+
+To address this limitation, a Long Short-Term Memory (LSTM) neural network was introduced. Rather than detecting anomalies directly from rate changes, the LSTM attempts to learn the temporal dynamics of seismic activity and forecast expected future seismic rates.
+
+Cells whose observed post-earthquake activity substantially exceeds the model prediction are treated as anomalous.
+
+---
+
+### Architecture
+
+A simple LSTM forecasting model was trained using monthly seismicity sequences derived from the earthquake catalog.
+
+Model configuration:
+
+| Parameter | Value |
+|------------|--------:|
+| Lookback window | 6 months |
+| Training samples | 18,984 |
+| Epochs | 11 |
+| Training loss | 0.0123 |
+| Validation loss | 0.0112 |
+
+The model learns the relationship between recent seismic activity and future monthly earthquake counts.
+
+---
+
+### Forecast Residuals
+
+For each H3 cell, the trained LSTM predicts the expected post-earthquake monthly seismic rate.
+
+The forecasting residual is defined as:
+
+$$
+Residual = |Observed - Predicted|
+$$
+
+Cells with unusually large residuals indicate locations where observed seismicity significantly exceeds the expected behavior learned from historical patterns.
+
+These residuals therefore serve as an anomaly score.
+
+---
+
+### H3 Aggregation
+
+Residuals were aggregated at Resolution-6 H3 cells.
+
+A cell was classified as anomalous when its forecasting residual exceeded the selected residual threshold.
+
+Results:
+
+| Metric | Value |
+|---------|-------:|
+| Active H3 cells | 339 |
+| LSTM-anomalous H3 cells | 23 |
+| Rate | 6.8% |
+
+![LSTM_H3_cells](LSTM_H3_cells.png)
+
+The resulting anomaly map highlights several concentrated regions along the East Anatolian Fault Zone where post-earthquake seismicity greatly exceeded the levels predicted by the neural forecasting model.
+
+
 
 
 
