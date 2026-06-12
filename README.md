@@ -673,4 +673,16 @@ The most robust anomalous zones are those repeatedly detected by multiple indepe
 
 The consensus analysis confirms that the detected anomaly pattern is spatially coherent, methodologically stable, and geologically meaningful.
 
+consensus_table = (
+    res6_all["consensus_score"]
+    .value_counts()
+    .sort_index()
+    .reset_index()
+)
 
+consensus_table.columns = [
+    "Consensus Score",
+    "Cell Count"
+]
+
+print(consensus_table)
