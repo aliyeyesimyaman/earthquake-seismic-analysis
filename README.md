@@ -650,6 +650,10 @@ Despite these methodological differences, all approaches consistently concentrat
 
 This convergence suggests that the detected anomalies are not artifacts of any single method, but represent robust spatial signatures of post-seismic reorganization.
 
+![overlap_matrix](overlap_matrix.png)
+
+![Jaccard](jakard_similarity.png)
+
 ### Final Consensus Analysis
 
 To identify the most reliable anomaly locations, a consensus framework was constructed.
