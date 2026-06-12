@@ -335,7 +335,7 @@ IQR flags an additional ~17 cells beyond the consensus region. These secondary a
 
 ## 7. Advanced Methods
 
-## 7.1 Literature Review for Advanced Methods
+### 7.1 Literature Review for Advanced Methods
 
 To complement the baseline anomaly-detection framework, two studies from the recent seismological literature were reviewed.
 
@@ -361,7 +361,7 @@ Together, these studies motivated the addition of clustering-based and neural fo
   <img src="lit_review_2.png" width="80%">
 </p>
 
-## 7.2 Advanced Temporal Diagnostics
+### 7.2 Advanced Temporal Diagnostics
 
 Before applying advanced anomaly detection methods, several temporal diagnostics were performed to evaluate whether the Kahramanmaraş earthquake sequence exhibits non-stationary and clustered seismic behavior. These analyses were inspired by temporal validation procedures commonly used in SOM-DBSCAN-based seismicity studies.
 
@@ -407,7 +407,7 @@ The pre-earthquake period ($CV = 1.32$) is relatively close to random background
 
 These results demonstrate that the post-earthquake catalog is highly clustered in time rather than randomly distributed, providing strong motivation for applying cluster-oriented methods such as ST-DBSCAN.
 
-## 7.3 Method 4 — Spatio-Temporal DBSCAN
+### 7.3 Method 4 — Spatio-Temporal DBSCAN
 
 While the baseline methods focus on changes in seismic rates at the H3-cell level, they do not explicitly consider the clustering behavior of individual earthquake events.
 
@@ -495,7 +495,7 @@ The resulting map highlights spatial zones where seismicity is primarily driven 
 
 <br>
 
-## 7.4 Method 5 — LSTM-based Seismic Forecasting
+### 7.4 Method 5 — LSTM-based Seismic Forecasting
 
 The previous methods identify anomalous H3 cells based on observed seismic-rate changes or clustering behavior. However, they do not explicitly model how seismic activity is expected to evolve over time.
 
@@ -559,7 +559,7 @@ The resulting anomaly map highlights several concentrated regions along the East
 
 <br>
 
-## 7.5 Advanced Method Comparison
+### 7.5 Advanced Method Comparison
 
 | Method | Flagged Cells | Rate | Primary Purpose |
 |----------|----------:|----------:|----------|
@@ -611,7 +611,7 @@ This convergence provides additional confidence that the detected anomaly zones 
 
 <br>
 
-## 7.6 Overall Results & Final Consensus Analysis
+## 8. Overall Results & Final Consensus Analysis
 
 Five complementary anomaly detection approaches were applied to the same H3 Resolution 6 grid:
 
@@ -622,6 +622,8 @@ Five complementary anomaly detection approaches were applied to the same H3 Reso
 | Isolation Forest | 16 | 4.7% | Unsupervised ML anomaly detection |
 | Spatio-Temporal DBSCAN | 38 | 11.2% | Density-based cluster detection |
 | LSTM Forecasting | 23 | 6.8% | Neural forecasting residual anomaly |
+
+![all_results](all_results.png)
 
 ### Spatial Agreement Across Methods
 
