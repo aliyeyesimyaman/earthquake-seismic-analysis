@@ -669,6 +669,10 @@ Possible scores range from:
 
 Cells with higher consensus scores represent locations where multiple independent detection strategies agree that seismic activity changed abnormally after the mainshock.
 
+![consensus_score_table](consensus_score_table.png)
+
+![consensus_score_distribution](consensus_score_distribution.png)
+
 ### Interpretation
 
 The highest-consensus cells form a coherent spatial cluster along the northern EAFZ segment near Kahramanmaraş, coinciding with the principal aftershock zone reported in seismological studies.
