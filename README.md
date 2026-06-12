@@ -92,6 +92,8 @@ event comparison across the study period (2018–2024).*
 
 ![EDA Graphs](graphs_eda.png)
 
+![EDA Graphs](eda_all_results.png)
+
 ---
 ## 3. Literature Review
 
