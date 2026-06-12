@@ -336,13 +336,25 @@ To complement the baseline anomaly-detection framework, two studies from the rec
 
 ### Sharma (2023) - Identification and spatio-temporal analysis of earthquake clusters using SOM–DBSCAN model
 
+> Sharma, A., Vijay, R. K., & Nanda, S. J. (2023). Identification and spatio-temporal analysis of earthquake clusters using SOM–DBSCAN model. Neural Computing and Applications, 35(11), 8081-8108.
+
 Sharma et al. proposed a spatio-temporal earthquake clustering framework based on SOM and DBSCAN. Although the SOM component was not adopted in this project, the study motivated the use of temporal validation diagnostics, including cumulative-event curves, seismicity-rate (lambda) plots, and the coefficient of variation (CV) of inter-event times. The paper also provided methodological inspiration for event-level spatio-temporal clustering using DBSCAN.
 
+<p align="center">
+  <img src="lit_review_4.png" width="80%">
+</p>
+
 ### Zlydenko (2023) - A neural encoder for earthquake rate forecasting
+
+>Zlydenko, O., Elidan, G., Hassidim, A., Kukliansky, D., Matias, Y., Meade, B., ... & Bar-Sinai, Y. (2023). A neural encoder for earthquake rate forecasting. Scientific reports, 13(1), 12350.
 
 Zlydenko et al. explored neural-network-based earthquake rate forecasting. Inspired by this forecasting perspective, we incorporated an LSTM-based neural rate forecasting approach to identify H3 cells whose post-earthquake seismic activity exceeded the level expected from historical seismicity patterns.
 
 Together, these studies motivated the addition of clustering-based and neural forecasting-based analyses, extending the baseline statistical framework with complementary advanced methods.
+
+<p align="center">
+  <img src="lit_review_2.png" width="80%">
+</p>
 
 
 
